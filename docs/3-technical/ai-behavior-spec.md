@@ -11,16 +11,21 @@
 - Varies by scenario template (cashier, date, friend, high-status stranger, etc.).
 - Gender and personality match the scenario description.
 
-### Difficulty Scaling
-- **Easy**: Friendly, cooperative, responsive. Builds user confidence.
-- **Medium**: Distracted, somewhat challenging, not fully engaged. Requires effort.
-- **Hard**: Rude, dismissive, skeptical, or high-status. Realistic friction. Sometimes the correct user response is to walk away.
+### Difficulty Scaling (from roleplay_templates table)
+- **Level 1** (level_1_mood): Friendly, cooperative, responsive. Builds user confidence.
+- **Level 2** (level_2_mood): Distracted, somewhat challenging, not fully engaged. Requires effort.
+- **Level 3** (level_3_mood): Rude, dismissive, skeptical, or high-status. Realistic friction. Sometimes the correct user response is to walk away.
+- Not all templates have all 3 levels. Backend must verify the selected level exists (is not null) before starting a session.
 
 ### Social Realism
 - Communication dynamics differ by gender context (male-to-male vs male-to-female interactions). The app acknowledges this openly.
 - NPC reactions should feel unpredictable within bounds — not scripted or robotic.
 
 ## Coach Behavior
+
+### Architecture
+- Coach is a **global system prompt** — not stored per template.
+- Each session's context (template personality, mood level, lesson objective, user's reflection text) is injected into the system prompt at session start.
 
 ### Base Persona
 - Analytical, specific, instructive.

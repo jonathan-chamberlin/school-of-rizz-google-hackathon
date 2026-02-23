@@ -66,12 +66,23 @@
 
 ## Phase 2 Tables
 
+### roleplay_templates
+- id (UUID, PK)
+- name (e.g., "Coffee Shop Small Talk", "First Date")
+- category (casual | social | emotionally_complex)
+- character_personality (text — base personality description)
+- level_1_mood (text — friendly, cooperative; nullable)
+- level_2_mood (text — distracted, challenging; nullable)
+- level_3_mood (text — rude, dismissive, high-status; nullable)
+- objective (text — what the user should practice)
+- created_at
+
 ### roleplay_sessions
 - id (UUID, PK)
 - user_id (FK → users)
 - lesson_id (FK → lessons, nullable — null for impromptu roleplays)
-- scenario_template
-- difficulty (easy | medium | hard)
+- template_id (FK → roleplay_templates)
+- level (1 | 2 | 3)
 - session_length_minutes
 - coach_mode (soft | no_bs)
 - created_at
@@ -99,5 +110,7 @@
 - notes.user_id
 - xp_events.user_id
 - streaks.user_id (unique)
+- roleplay_templates.name (unique)
 - roleplay_sessions.user_id
+- roleplay_sessions.template_id
 - roleplay_attempts.session_id

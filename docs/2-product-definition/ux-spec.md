@@ -33,10 +33,11 @@
 - Environment: Dense city, suburban + school, college, rural / small town
 
 ### Affirmation Screens
-After each answer, show a screen with a message communicating that Roomcraft helps with exactly that. Example: if the user selects "rural / small town," show a message like "Roomcraft helps people in small towns build real connections." These screens reinforce that the app understands the user's specific situation.
+After each answer, show a screen with a message communicating that Roomcraft helps with exactly that. Example: if the user selects "rural / small town," show a message like "Roomcraft helps people in small towns build real connections." These screens reinforce that the app understands the user's specific situation. Copy is hardcoded per answer option in the frontend — reads from the onboarding responses already collected in the flow.
 
 ## Roleplay Entry UI (Phase 1 — UI only, no voice agent yet)
-- Screen to select scenario, difficulty, and session length.
+- Screen to select scenario template, level (1/2/3), and session length.
+- Level buttons are only enabled if that level exists on the template (level_X_mood is not null).
 - Shows "Coming Soon" or similar for the actual roleplay experience.
 - Entry points: from lesson "Practice Now" button, from Dashboard.
 
