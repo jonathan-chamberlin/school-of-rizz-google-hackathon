@@ -76,7 +76,7 @@ Roomcraft. This app helps people create relationships by giving you the skills t
 
     You can apply this same method to an online course or a video.
 
-# SAM
+## SAM
 
 1. Visualize yourself in a fun social situation. Just focus on the emotions and other people reacting positively.
     - Example: Me and my friend at our apartment, having a game night of cards with 4 female friends around our table.
@@ -89,3 +89,19 @@ Roomcraft. This app helps people create relationships by giving you the skills t
 
 Onboarding
 - Give your name, age, city, current social circle, satisfaction with it, how many close friends you have, how many acquiantances you have, your relationships with your current friends.
+
+# Tech Stack
+Next.js: Full-stack React framework that provides routing, server-side rendering, API routes, and production optimization in one structured system.
+
+* React: Component-based UI library used by Next.js to build interactive interfaces.
+* Node.js: Runtime environment Next.js uses on the server to execute backend code.
+
+TypeScript: Strongly typed superset of JavaScript that improves reliability, maintainability, and scalability across frontend and backend.
+
+PostgreSQL: Relational database ideal for structured, transactional application data like users, lessons, and progress tracking.
+
+* Prisma: Type-safe ORM used to interact with PostgreSQL cleanly and efficiently from TypeScript.
+
+Tailwind CSS: Utility-first CSS framework that enables fast, consistent, and scalable UI styling without custom CSS sprawl.
+
+Vercel: Cloud hosting platform optimized for Next.js that enables simple deployment, scaling, and CI/CD directly from GitHub.
