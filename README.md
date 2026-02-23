@@ -57,24 +57,48 @@ Each lesson follows the Book Absorption Method (BAM): read a principle → refle
 
 ## 🗺️ Phasing
 
-### 🚀 Phase 1 (MVP)
-- 📝 Lessons: text + reflection prompt + AI-generated suggestions + "Practice Now" CTA
-- 🎮 Roleplay entry UI (scenario/difficulty/length selection — voice not yet built)
-- 👋 Onboarding flow
+### 🔫 Phase 0 — Tracer Bullet
+Prove the full path works end-to-end with the simplest possible version:
+- 👋 Onboarding: single question ("What's your name?"), saved to database
+- 📝 One button: "Take me to lesson" → AI-generated lesson page (follows the lesson template)
+- ✍️ Reflection text box at the bottom of the lesson, sends input to the AI agent
+- 🗣️ "Start Roleplay" button changes UI to roleplay mode — green circle when mic detects audio, yellow when silent
+- 🎭 Verify: Ask the agent 'who are you' (circle turns green), then the character agent responds ("Hey I'm the character"). Ask it "What's my name?" — it should answer correctly because the name was passed to its context
+- 🏋️ Coach agent (different voice, circle changes to blue) is sent the prompt "Give some encouragement. 10 words or less," and we hear it's response.
+- 📊 Session ends, scores are randomly generated and displayed
+- ✅ Success = data flows from onboarding → lesson → reflection → roleplay → both agents → scores
+
+### 📝 Phase 1 — Lessons & Onboarding
+- 👋 Full onboarding flow (name, age, goals, identity tier, environment)
+- 📚 Lesson pages: text + reflection prompt + AI-generated suggestions + "Practice Now" CTA
 - 🏠 Dashboard with lesson feed
 - 🗒️ Notes feature (log real-world situations)
-- ⭐ XP and leveling system
 
-### 🔥 Phase 2
-- 🎤 Voice + video roleplay with two agents (character + coach)
-- 📹 On-camera recording with live feedback overlay and rizz meter
-- 🏆 Rizz score + shareable screenshot generation
-- 📲 One-tap sharing to TikTok, IG Reels, IG Stories, Snapchat, iMessage
-- 📊 Scoring & analytics (6 categories per attempt)
+### 🎤 Phase 2 — Voice Roleplay
+- 🎭 Voice roleplay with character agent (scenario templates, difficulty tiers)
+- 🏋️ Live coach agent feedback during sessions (Soft Coach / No-BS Coach)
+- 🔁 Repeat-and-rephrase loop (coach pauses, user repeats improved line 2-3x)
+- ⏱️ Session lengths: 3 min, 5 min, 8 min, 15 min
+
+### 📹 Phase 3 — Video & Scoring
+- 📹 On-camera recording (front camera) with live feedback overlay and rizz meter
+- 📊 Real scoring engine: warmth, confidence, clarity, humor, listening, application of principle (1-10 each)
+- 🏆 Rizz score calculation from category scores
 - 🗃️ Recording & transcript library with playback
+
+### 📲 Phase 4 — Shareability
+- 📸 Umax-style shareable screenshot with rizz score, category breakdown, highlight descriptor
+- 🎥 Downloadable video with face + AI audio + live feedback overlay + rizz meter
+- 🔗 One-tap share to TikTok, IG Reels, IG Stories, Snapchat, Snapchat Story, iMessage
+- 🏷️ School of Rizz branding/watermark on all shared content
+
+### 💰 Phase 5 — Monetization & Growth
 - 💳 Freemium gating and subscription billing
+- 🆓 Free hook: one roleplay → rizz score + screenshot, detailed feedback behind paywall
+- ⭐ XP and leveling system
 - 🎲 Impromptu roleplays generated from Notes
-- 🔔 Push notifications
+- 🔔 Push notifications (Duolingo-style)
+- 📈 Analytics dashboard (progress over time)
 
 ## 🛠️ Tech Stack
 
