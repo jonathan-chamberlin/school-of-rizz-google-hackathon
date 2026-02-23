@@ -15,6 +15,7 @@ But some scenarios are plausible-but-absurd, designed to be funny and shareable:
 - "Women see you playing pickleball and start hitting on you"
 - "Jeffrey Epstein invites you to his island"
 - "First date with a Taylor Swift fan"
+- "Mom wants you to stop playing Xbox"
 
 The absurd scenarios are the primary viral content engine. They get screenshotted, reacted to, argued about in comments, and stitched on TikTok.
 

@@ -61,7 +61,7 @@ Freemium with gated features, subscription model.
     - How to Win at College
     - etc.
 
-### BAM
+### Book Absoption Method (BAM)
 - 1 Cycle of Book Absorption
     1. Read & listen to a chapter or section at same time
     2. Take notes on how I could apply it to past situations

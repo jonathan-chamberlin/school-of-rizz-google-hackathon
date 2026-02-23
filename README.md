@@ -1,106 +1,115 @@
-# Problem:
-Neurodivergent people feel isolated because people don't vibe with them. They try to connect but often get rejected and don't understand why. This leads to lonliness, depression, anxiety, and a feeling of hopelessness.
+# School of Rizz
 
-# Ideal client avatar:
-- Male, Neurodivergent, intelligent, socially akward.
-- College student or professional
-- living in a city where meeting people is easier, or someone with a few friends already where they can test this.
+AI rizz coach. Practice talking to people, get scored, get better.
 
-# Solution
-Roomcraft. This app helps people create relationships by giving you the skills to connect. Imagine that whenever you spoke, people laughed. Imagine that people invite you to hangouts because you're so enjoyable to be around. Imagine whenever you spoke to someone you were attracted to, they ask you for your number. How would that help you? How much happier would you be? It helps with deepening existing relationships with friends, family, and coworkers. It also helps you make new friends.
+## What It Does
 
-# Method:
-- This app is based off the Book Absorbtion Method (BAM) & Social Achievement Method (SAM). These methods will be combined into a new method where the user reads or watches with a lesson from sources like:
-    - How to Win Friends & Influence People
-    - Never Split the Difference
-    - Evolutionary Psycology
-    - Evolution of Desire
-    - Super Communicators
-    - Spin Selling
-    - The Power of Habit
-    - Atomic Habits
-    - Rational Male
-    - Way of the Superior Man
-    - The Setup by Dan Bilzarian
-    - 48 Laws of Power
-    - The Laws of Human Nature
-    - The Power of Now
-    - The Dichotomy of Leadership
-    - The Alter Ego Effect
-    - Content from Men of Action
-    - Content about looksmaxxing
-    - How the Mind Works by Steven Pinker
-    - How to Win at College
-    - etc.
+Open the app, pick a scenario, and talk your way through it — on camera, with live AI feedback. You get a rizz score at the end. Share it, screenshot it, flex on your friends, or learn from it.
 
-## BAM
-- 1 Cycle of Book Absorption
-    1. Read & listen to a chapter or section at same time
-    2. Take notes on how I could apply it to past situations
-    3. Imagine myself acting differently in those past situations
+**The core loop:**
+1. Pick a scenario (realistic or absurd)
+2. Talk through it on camera with the AI character
+3. Get live coaching feedback as you go
+4. After ~3 minutes, get your rizz score + breakdown (warmth, confidence, wit, etc.)
+5. Share the screenshot or video
 
-    This tactic allows me to consume books far faster. The book or audiobook usually costs $12. The other often costs $7. So for an extra $7 I can read the book faster and absorb it better. Now it seems obvious to buy both if I can learn something from the book
+## Why It Exists
 
-- Why Not Do Multiple Cycles? I should
+Most guys know they could be better socially — with girls, with friends, in groups — but there's no way to actually practice. You can watch Hamza videos all day, but when the moment comes, you freeze. Information doesn't change behavior. Reps do.
 
-    If a chapter is short, you can do another cycle of book absorbtion. This worked very effectively with how to Win Friends and Influence People, where each chapter was 5 pages.
+Every other option gives information. School of Rizz gives reps. It's a personal rizz coach that actually listens to you talk, watches your face, and tells you what's working and what's not — in real time.
 
-    Consider this: I noticed if I listen to a really catchy reel of singers, I often listen to it 4 or more times. Then, it pops in my head throughout the Next few days.  Maybe this is due to the catchiness.  Or maybe it's due to the repetition. This means if I listen to a piece of content 4 or more times, it will be far more deeply put into my subconscious than 2 times.
+## How It Works
 
-- How to Look Forward to Reading
+### Scenarios
+Realistic scenarios guys actually face (approaching at a party, first dates, networking events) plus absurd viral scenarios designed to be shared ("You ran over someone's grandma", "Your discord kitten got a bad test grade").
 
-    The biggest reason why people stop reading is because they're reading something they aren't interested it. Therefore, if you come across something you aren't interested in, skip it.
+### Two AI Agents
+- **Character** — plays the person in the scenario. Behavior scales by difficulty: friendly → distracted → rude/dismissive.
+- **Coach** — gives live feedback during the session. One prioritized change at a time. Two modes: Soft Coach or No-BS Coach.
 
-    This applies to individual sentences, paragraphs, pages, sections, chapters, and even entire books.
+### Scoring (per attempt)
+Warmth, Confidence, Clarity, Humor, Listening, and Application of Principle — each rated 1-10. Combined into an overall rizz score.
 
-    Don't force yourself to read something you aren't interested in. If you aren't interested, won't learn anything useful from it, so what's the point?
+### Shareable Output
+- **Screenshot** — Umax-style results screen with your face, rizz score, category breakdown, and a highlight descriptor. One-tap share to TikTok, IG Reels, IG Stories, Snapchat, iMessage.
+- **Video** — full recording with your face, both AI voices, live feedback overlay, and rizz meter. One-tap share to all platforms.
 
-- When is studying most effective?
+## Monetization
 
-    Don't eat while studying. Eat after studying.
+**Free:** One roleplay with live coaching (~3 min) → rizz score + shareable screenshot.
 
-    Study before a nap. If you nap after studying, your NREM sleep will consolidate that textbook-like information quickly. This means you can apply it better that day.
+**Paywall:** Detailed feedback breakdown, unlimited sessions, all scenarios, all session lengths (3/5/8/15 min), progress tracking.
 
-    So the ideal order is:
+## Content Method
 
-    - gym
-    - shower
-    - study
-    - eat
-    - nap
-    - (team meeting)
-    - sell door to door
+Lessons are drawn from books and content on social dynamics, communication, and psychology:
+- How to Win Friends & Influence People
+- Never Split the Difference
+- 48 Laws of Power
+- The Laws of Human Nature
+- Rational Male
+- Super Communicators
+- Content from creators like Hamza, Michael Sartain, Owen Cook, Playing with Fire
+- And more
 
-- Applications to Videos or Courses
+Each lesson follows the Book Absorption Method (BAM): read a principle → reflect on past situations where it applies → practice it in a roleplay. The app also supports a Social Achievement Method (SAM): visualize social situations → mentally rehearse → practice with the AI.
 
-    You can apply this same method to an online course or a video.
+## Phasing
 
-## SAM
+### Phase 1 (MVP)
+- Lessons: text + reflection prompt + AI-generated suggestions + "Practice Now" CTA
+- Roleplay entry UI (scenario/difficulty/length selection — voice not yet built)
+- Onboarding flow
+- Dashboard with lesson feed
+- Notes feature (log real-world situations)
+- XP and leveling system
 
-1. Visualize yourself in a fun social situation. Just focus on the emotions and other people reacting positively.
-    - Example: Me and my friend at our apartment, having a game night of cards with 4 female friends around our table.
-2. Mentally rehearse yourself saying hi to someone new.
-    - Example: when checking out at a grocery store, visualize yourself asking 'Busy day so far?' with a smile. Imagine them saying 'Not too bad.' Then you say 'Let's gooooo' with a smile.
-    - Example: approaching a girl or guy at a networking event.
-    - Example: while sitting in class, ask the person next to you how their weekend was, then what they did for it, then say either 'Sounds fun' or 'That sounds aweful,' with a smile
-3. Use book absorption method on a page or card with a lesson from books like How to Win Friends & Influence People, Never Split the Difference, or content from Men of Action.
-    1. Some topics: Comedy, breaking rapport, social interactions, male nature, female nature, winning friends, providing value to others, setting up hangouts with people, evolutionary cause of social anxiety, appearance
+### Phase 2
+- Voice + video roleplay with two agents (character + coach)
+- On-camera recording with live feedback overlay and rizz meter
+- Rizz score + shareable screenshot generation
+- One-tap sharing to TikTok, IG Reels, IG Stories, Snapchat, iMessage
+- Scoring & analytics (6 categories per attempt)
+- Recording & transcript library with playback
+- Freemium gating and subscription billing
+- Impromptu roleplays generated from Notes
+- Push notifications
 
-Onboarding
-- Give your name, age, city, current social circle, satisfaction with it, how many close friends you have, how many acquiantances you have, your relationships with your current friends.
+## Tech Stack
 
-# Tech Stack
-Next.js: Full-stack React framework that provides routing, server-side rendering, API routes, and production optimization in one structured system.
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Next.js, React, TypeScript, Tailwind CSS |
+| Backend | Next.js API Routes, Prisma |
+| Database | PostgreSQL (Vercel Postgres / Neon) |
+| Auth | Google OAuth |
+| AI (reasoning) | Claude Sonnet 4.5 (coaching, NPC behavior), Claude Haiku 4.5 (suggestions, simple tasks) |
+| Voice AI (Phase 2) | Hume AI EVI 3 (STT + TTS with emotional expressiveness) |
+| Audio/Video Storage (Phase 2) | Cloudflare R2 |
+| Hosting | Vercel |
+| Content | MDX files in repo |
 
-* React: Component-based UI library used by Next.js to build interactive interfaces.
-* Node.js: Runtime environment Next.js uses on the server to execute backend code.
+## Docs
 
-TypeScript: Strongly typed superset of JavaScript that improves reliability, maintainability, and scalability across frontend and backend.
-
-PostgreSQL: Relational database ideal for structured, transactional application data like users, lessons, and progress tracking.
-
-* Prisma: Type-safe ORM used to interact with PostgreSQL cleanly and efficiently from TypeScript.
-
-Tailwind CSS: Utility-first CSS framework that enables fast, consistent, and scalable UI styling without custom CSS sprawl.
-
-Vercel: Cloud hosting platform optimized for Next.js that enables simple deployment, scaling, and CI/CD directly from GitHub.
+```
+docs/
+├── 1-vision-and-strategy/
+│   ├── product-vision.md
+│   ├── persona.md
+│   ├── positioning-and-messaging.md
+│   └── viral-content-playbook.md
+├── 2-product-definition/
+│   ├── product_requirements_doc.md
+│   ├── ux-spec.md
+│   ├── roleplay-feature-spec.md
+│   └── user-flow-diagrams.md
+├── 3-technical/
+│   ├── technical-architecture.md
+│   ├── ai-behavior-spec.md
+│   ├── api-contract.md
+│   └── database-schema.md
+├── 4-design-system/
+├── 5-growth-and-analytics/
+└── 6-legal-and-trust/
+```
