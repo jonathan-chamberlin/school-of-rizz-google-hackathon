@@ -1,15 +1,43 @@
-# Problem:
-Neurodivergent people feel isolated because people don't vibe with them. They try to connect but often get rejected and don't understand why. This leads to lonliness, depression, anxiety, and a feeling of hopelessness.
+# Product Requirements Document
 
-# Ideal client avatar:
-- Male, Neurodivergent, intelligent, socially akward.
-- College student or professional
-- living in a city where meeting people is easier, or someone with a few friends already where they can test this.
+## Monetization
+Freemium with gated features, subscription model.
 
-# Solution
-Roomcraft. This app helps people create relationships by giving you the skills to connect. Imagine that whenever you spoke, people laughed. Imagine that people invite you to hangouts because you're so enjoyable to be around. Imagine whenever you spoke to someone you were attracted to, they ask you for your number. How would that help you? How much happier would you be? It helps with deepening existing relationships with friends, family, and coworkers. It also helps you make new friends.
+### Free Trial (7 days)
+- 5-minute roleplays with the coach agent giving live feedback.
 
-# Method:
+### Free Tier (after trial)
+- Roleplay with the person agent only (no live coach).
+- Feedback given only at the end of an attempt; user must complete another full attempt to get more feedback.
+- Some feedback is blurred out (Grammarly-style: identifies improvements but requires upgrade to see them).
+- Session length limited.
+
+### Premium Tier (subscription)
+- Live coach feedback during roleplays.
+- Session lengths: 3 min, 5 min, 8 min, 15 min.
+- Full feedback visibility.
+
+## Phasing
+
+### Phase 1 (MVP)
+- Lessons (BAM): text + reflection prompt (text box) + AI-generated suggestions + "Practice Now" CTA.
+- Self-guided SAM exercises.
+- Roleplay entry UI (scenario/difficulty/length selection screen exists, but actual voice roleplay not yet built).
+- Onboarding flow with affirmation screens.
+- Dashboard with lesson feed, streak bar, XP level.
+- Notes feature (plus button → log real-world situations).
+- XP and leveling system.
+- Content written by founder.
+
+### Phase 2
+- Voice roleplay with two agents (person + coach).
+- Recording & transcript library with playback.
+- Scoring & analytics (6 categories per attempt).
+- Freemium gating and subscription billing.
+- Impromptu roleplays generated from Notes.
+- Push notifications (24h after last usage, Duolingo-style).
+
+## Method
 - This app is based off the Book Absorbtion Method (BAM) & Social Achievement Method (SAM). These methods will be combined into a new method where the user reads or watches with a lesson from sources like:
     - How to Win Friends & Influence People
     - Never Split the Difference
@@ -33,7 +61,7 @@ Roomcraft. This app helps people create relationships by giving you the skills t
     - How to Win at College
     - etc.
 
-## BAM
+### BAM
 - 1 Cycle of Book Absorption
     1. Read & listen to a chapter or section at same time
     2. Take notes on how I could apply it to past situations
@@ -75,7 +103,7 @@ Roomcraft. This app helps people create relationships by giving you the skills t
 
     You can apply this same method to an online course or a video.
 
-## SAM
+### SAM
 
 1. Visualize yourself in a fun social situation. Just focus on the emotions and other people reacting positively.
     - Example: Me and my friend at our apartment, having a game night of cards with 4 female friends around our table.
@@ -85,22 +113,3 @@ Roomcraft. This app helps people create relationships by giving you the skills t
     - Example: while sitting in class, ask the person next to you how their weekend was, then what they did for it, then say either 'Sounds fun' or 'That sounds aweful,' with a smile
 3. Use book absorption method on a page or card with a lesson from books like How to Win Friends & Influence People, Never Split the Difference, or content from Men of Action.
     1. Some topics: Comedy, breaking rapport, social interactions, male nature, female nature, winning friends, providing value to others, setting up hangouts with people, evolutionary cause of social anxiety, appearance
-
-Onboarding
-- Give your name, age, city, current social circle, satisfaction with it, how many close friends you have, how many acquiantances you have, your relationships with your current friends.
-
-# Tech Stack
-Next.js: Full-stack React framework that provides routing, server-side rendering, API routes, and production optimization in one structured system.
-
-* React: Component-based UI library used by Next.js to build interactive interfaces.
-* Node.js: Runtime environment Next.js uses on the server to execute backend code.
-
-TypeScript: Strongly typed superset of JavaScript that improves reliability, maintainability, and scalability across frontend and backend.
-
-PostgreSQL: Relational database ideal for structured, transactional application data like users, lessons, and progress tracking.
-
-* Prisma: Type-safe ORM used to interact with PostgreSQL cleanly and efficiently from TypeScript.
-
-Tailwind CSS: Utility-first CSS framework that enables fast, consistent, and scalable UI styling without custom CSS sprawl.
-
-Vercel: Cloud hosting platform optimized for Next.js that enables simple deployment, scaling, and CI/CD directly from GitHub.
