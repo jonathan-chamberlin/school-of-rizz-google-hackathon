@@ -1,6 +1,6 @@
 import React from 'react'
-import Hello from "@/app/components/hello"
-import MyButton from './components/button'
+import Hello from "@/components/hello"
+import MyButton from '../components/button'
 
 const Home = () => {
   return (
