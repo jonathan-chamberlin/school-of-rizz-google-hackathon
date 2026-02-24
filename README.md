@@ -99,7 +99,6 @@ Prove the full path works end-to-end with the simplest possible version:
 - 🎲 Impromptu roleplays generated from Notes
 - At end of lesson, there is a reflection section which informs what scenario the lesson will be roleplayed in. Add AI scenario suggestions based off reading the notes.
 
-
 ### 🏆 Phase 7 — XP & Analytics
 - ⭐ XP and leveling system
 - 📈 Analytics dashboard (progress over time)
