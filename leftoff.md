@@ -15,8 +15,8 @@ Forked from social-skills-web-app. Swapped all AI/infra providers for Google sta
 
 ## Next steps
 
-1. Set up Next.js project with Google GenAI SDK (`@google/genai`)
-2. Get Gemini Live API voice session working (browser ↔ Gemini bidirectional audio)
+1[done]. Set up Next.js project with Google GenAI SDK (`@google/genai`)
+2. Build tracer bullet
 1) Read 3-technical\database-schema.md and 2-product-definition\ux-spec.md 2) The watch app mafia video on design\wireframing 3) Then create user flow charts. Like each screen, where the buttons are, and where they go.
 3. Single NPC roleplay: user talks, Gemini responds in character
 5. Deploy to Cloud Run + Cloud SQL
