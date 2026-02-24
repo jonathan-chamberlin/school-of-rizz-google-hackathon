@@ -80,6 +80,7 @@ Prove the full path works end-to-end with the simplest possible version:
 ### 📹 Phase 3 — Video & Scoring
 - 📹 On-camera recording (front camera) with live feedback overlay and rizz meter
 - 📊 Real scoring engine: warmth, confidence, clarity, humor, listening, application of principle (1-10 each)
+- Scores appear on screen live.
 - 🏆 Rizz score calculation from category scores
 - 🗃️ Recording & transcript library with playback
 
@@ -89,12 +90,18 @@ Prove the full path works end-to-end with the simplest possible version:
 - 🔗 One-tap share to TikTok, IG Reels, IG Stories, Snapchat, Snapchat Story, iMessage
 - 🏷️ School of Rizz branding/watermark on all shared content
 
-### 💰 Phase 5 — Monetization & Growth
+### 💰 Phase 5 — Monetization
 - 💳 Freemium gating and subscription billing
 - 🆓 Free hook: one roleplay → rizz score + screenshot, detailed feedback behind paywall
-- ⭐ XP and leveling system
-- 🎲 Impromptu roleplays generated from Notes
 - 🔔 Push notifications (Duolingo-style)
+
+### Phase 6 - Impromtu Roleplays
+- 🎲 Impromptu roleplays generated from Notes
+- At end of lesson, there is a reflection section which informs what scenario the lesson will be roleplayed in. Add AI scenario suggestions based off reading the notes.
+
+
+### 🏆 Phase 7 — XP & Analytics
+- ⭐ XP and leveling system
 - 📈 Analytics dashboard (progress over time)
 
 ## 🛠️ Tech Stack
