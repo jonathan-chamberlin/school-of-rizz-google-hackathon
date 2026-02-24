@@ -24,7 +24,7 @@ All endpoints require Google OAuth authentication unless noted.
 - `PUT /api/lessons/[slug]/progress` — Update progress (submit reflection, mark completed).
 
 ## Lesson Suggestions (AI-powered)
-- `GET /api/lessons/[slug]/suggestions` — Sends the lesson's principle + user's Notes to Claude Haiku. Returns 3-5 suggested practice scenarios based on the user's real-world situations. Reads from `notes` and `lessons` tables.
+- `GET /api/lessons/[slug]/suggestions` — Sends the lesson's principle + user's Notes to Gemini Flash Lite. Returns 3-5 suggested practice scenarios based on the user's real-world situations. Reads from `notes` and `lessons` tables.
 
 ## Notes
 - `GET /api/notes` — List all notes for current user (sorted by created_at desc).

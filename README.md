@@ -60,9 +60,9 @@ Each lesson follows the Book Absorption Method (BAM): read a principle → refle
 ### 🔫 Phase 0 — Tracer Bullet
 Prove the full path works end-to-end with the simplest possible version:
 - 👋 Onboarding: single question ("What's your name?"), saved to database
-- 🤖 Reasoning agent reads database and sends prompt to the voice agent ("the user's name is {name}"). Launches voice mode.
-- 🎭 Ask the voice agent "What's my name?". Verifying Hume API -> Browser audio connection. Voice agent should answer correctly.
-- 📝 Session ends, voice agent generates a warmth score, sends it and the transcipt to the database. 
+- 🤖 Reasoning agent reads database and sends prompt to the Gemini Live API voice agent ("the user's name is {name}"). Launches voice mode.
+- 🎭 Ask the voice agent "What's my name?". Verifying Gemini Live API → Browser audio connection. Voice agent should answer correctly.
+- 📝 Session ends, voice agent generates a warmth score, sends it and the transcript to the database.
 - 📊 Reasoning agent reads the database row of the transcript, generates a "humor" score, which is sent to the database
 - 💖 Then both the warmth score and humor score are displayed on the frontend.
 
@@ -110,12 +110,13 @@ Prove the full path works end-to-end with the simplest possible version:
 |-------|-----------|
 | 🖥️ Frontend | Next.js, React, TypeScript, Tailwind CSS |
 | ⚡ Backend | Next.js API Routes, Prisma |
-| 🗄️ Database | PostgreSQL (Vercel Postgres / Neon) |
+| 🗄️ Database | Cloud SQL (PostgreSQL) |
 | 🔐 Auth | Google OAuth |
-| 🧠 AI (reasoning) | Claude Sonnet 4.5 (coaching, NPC behavior), Claude Haiku 4.5 (suggestions, simple tasks) |
-| 🗣️ Voice AI (Phase 2) | Hume AI EVI 3 (STT + TTS with emotional expressiveness) |
-| 📦 Audio/Video Storage (Phase 2) | Cloudflare R2 |
-| ☁️ Hosting | Vercel |
+| 🧠 AI (reasoning) | Gemini 2.0 Flash (coaching, NPC behavior), Gemini 2.0 Flash Lite (suggestions, simple tasks) |
+| 🗣️ Voice AI | Gemini Live API (real-time bidirectional voice — STT + TTS + reasoning unified) |
+| 🤖 Agent Framework | Google Agent Development Kit (ADK) |
+| 📦 Audio/Video Storage | Cloud Storage |
+| ☁️ Hosting | Cloud Run |
 | 📄 Content | MDX files in repo |
 
 ## 📂 Docs

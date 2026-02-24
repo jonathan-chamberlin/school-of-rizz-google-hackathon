@@ -91,7 +91,7 @@
 - id (UUID, PK)
 - session_id (FK → roleplay_sessions)
 - attempt_number
-- audio_url (Cloudflare R2 path)
+- audio_url (Cloud Storage path)
 - transcript (text)
 - score_application (1-10)
 - score_warmth (1-10)

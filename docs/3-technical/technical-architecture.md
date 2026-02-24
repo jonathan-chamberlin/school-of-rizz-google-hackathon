@@ -3,6 +3,7 @@
 ## Platform
 - Web app first (responsive, mobile-friendly), with planned iOS migration later.
 - All design decisions should assume eventual mobile migration.
+- Built for the Gemini Live Agent Challenge — deployed on Google Cloud, powered by Gemini.
 
 ## Tech Stack
 
@@ -17,46 +18,51 @@
 - **Prisma** — type-safe ORM for PostgreSQL.
 
 ### Database
-- **PostgreSQL (Vercel Postgres / Neon)** — users, progress, notes, onboarding data, session metadata.
+- **Cloud SQL (PostgreSQL)** — users, progress, notes, onboarding data, session metadata.
 
 ### Content
 - **MDX files in repo** — lesson content with React component support. Requires deploy to update lessons.
 
 ### Auth
-- **Google OAuth** — single sign-on.
+- **Google OAuth** — single sign-on via Google Identity Platform.
 
 ### AI
-- **Claude Sonnet 4.5** — coaching analysis, NPC roleplay behavior, reflection prompt generation (quality-critical tasks).
-- **Claude Haiku 4.5** — lesson suggestions, affirmation screen copy, simple classification tasks (cost-optimized).
+- **Gemini 2.0 Flash** — coaching analysis, NPC roleplay behavior, reflection prompt generation (quality-critical tasks).
+- **Gemini 2.0 Flash Lite** — lesson suggestions, affirmation screen copy, simple classification tasks (cost-optimized).
+- **Google GenAI SDK** (`@google/genai`) — SDK for all Gemini API calls.
 
-### Voice AI (Phase 2)
-- **Hume AI EVI 3** — voice roleplay (STT + TTS with emotional expressiveness). Needs separate LLM integration (Claude) for reasoning.
+### Voice AI
+- **Gemini Live API** — real-time bidirectional voice (STT + TTS) with natural conversation and interruption handling. Voice and reasoning are unified — no separate voice + LLM integration needed.
+- Connects via WebSocket from the browser.
 
-### Audio Storage (Phase 2)
-- **Cloudflare R2** — zero egress fees, S3-compatible. Store roleplay recordings.
+### Agent Framework
+- **Google Agent Development Kit (ADK)** — orchestrates the dual-agent architecture (Character Agent + Coach Agent). Provides built-in tool use, agent handoff, and conversation management.
+
+### Audio/Video Storage
+- **Cloud Storage** — store roleplay recordings. S3-compatible.
 
 ### Hosting
-- **Vercel** — optimized for Next.js, CI/CD from GitHub, free hobby tier to start.
+- **Cloud Run** — containerized Next.js app, auto-scaling, optimized for Google Cloud deployment.
 
 ## System Diagram (Phase 1)
 
 ```
 User (Browser)
   │
-  ├── Next.js Frontend (Vercel)
+  ├── Next.js Frontend (Cloud Run)
   │     ├── Lesson pages (MDX)
   │     ├── Dashboard
   │     ├── Onboarding flow
   │     └── Roleplay entry UI (placeholder)
   │
-  ├── Next.js API Routes (Vercel)
+  ├── Next.js API Routes (Cloud Run)
   │     ├── Auth (Google OAuth)
   │     ├── User progress CRUD
   │     ├── Notes CRUD
   │     ├── Lesson metadata
-  │     └── AI endpoints (Claude Haiku/Sonnet)
+  │     └── AI endpoints (Gemini Flash / Flash Lite via GenAI SDK)
   │
-  └── PostgreSQL (Vercel Postgres / Neon)
+  └── Cloud SQL (PostgreSQL)
         ├── Users
         ├── Onboarding responses
         ├── Lesson progress
@@ -68,14 +74,14 @@ User (Browser)
 ## System Diagram (Phase 2 additions)
 
 ```
-  ├── Hume AI EVI 3 (WebSocket)
-  │     ├── NPC voice (emotional, scenario-aware)
+  ├── Gemini Live API (WebSocket)
+  │     ├── NPC voice (scenario-aware, real-time conversation)
   │     └── Coach voice (analytical, instructive)
   │
-  ├── Claude Sonnet API
-  │     ├── NPC reasoning / persona
-  │     └── Coach analysis / feedback
+  ├── Google ADK
+  │     ├── Character Agent — NPC roleplay persona
+  │     └── Coach Agent — analysis, feedback, scoring
   │
-  └── Cloudflare R2
+  └── Cloud Storage
         └── Audio recordings (roleplay attempts)
 ```

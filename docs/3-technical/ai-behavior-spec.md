@@ -1,8 +1,8 @@
 # AI Behavior Spec
 
 ## Models Used
-- **Claude Sonnet 4.5** — NPC roleplay, coaching feedback, reflection prompt → roleplay prompt generation.
-- **Claude Haiku 4.5** — lesson suggestions, affirmation screen copy, note categorization, simple tasks.
+- **Gemini 2.0 Flash** — NPC roleplay, coaching feedback, reflection prompt → roleplay prompt generation.
+- **Gemini 2.0 Flash Lite** — lesson suggestions, affirmation screen copy, note categorization, simple tasks.
 
 ## NPC Behavior
 
@@ -52,13 +52,13 @@
 
 ## Reflection Prompt → Roleplay Prompt Pipeline
 1. User reads a lesson and types a past situation in the reflection text box.
-2. AI (Sonnet) analyzes the user's input and generates a roleplay prompt:
+2. AI (Gemini Flash) analyzes the user's input and generates a roleplay prompt:
    - Scenario setup for the NPC (who they are, context, how to behave).
    - Objective for the user (which principle to apply).
    - Difficulty calibration.
 3. This prompt is sent to the voice agent (Phase 2) or stored for when voice ships.
 
 ## Suggestions Engine
-- AI (Haiku) reads the user's Notes (logged real-world situations) and the current lesson's principle.
+- AI (Gemini Flash Lite) reads the user's Notes (logged real-world situations) and the current lesson's principle.
 - Generates 3-5 suggested practice scenarios relevant to the user's actual life.
 - Displayed in the "Suggestions" section below the reflection prompt on each lesson page.

@@ -15,8 +15,8 @@
 - Scoring data per attempt.
 
 ## Storage
-- User data and metadata: PostgreSQL (Vercel Postgres / Neon).
-- Audio recordings (Phase 2): Cloudflare R2, encrypted at rest.
+- User data and metadata: Cloud SQL (PostgreSQL).
+- Audio recordings (Phase 2): Cloud Storage, encrypted at rest.
 
 ## Data Retention
 - User data retained while account is active.
@@ -36,7 +36,7 @@
 
 ## iOS App Store Compliance (Apple Guideline 5.1.2(i))
 - Must declare "Audio Data" in App Store privacy details.
-- Must disclose that voice data is sent to server and to third-party AI services (Hume AI, Anthropic).
+- Must disclose that voice data is sent to server and to third-party AI services (Google Gemini).
 - Must obtain explicit permission before any data transmission.
 - Must provide granular user control (opt-in/out).
 

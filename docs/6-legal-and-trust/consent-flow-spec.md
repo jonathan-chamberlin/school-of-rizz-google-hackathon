@@ -26,5 +26,5 @@ Triggered on first attempt to start a roleplay session.
 - Info: "Your recordings are stored on our servers and may be reviewed to improve the AI coach. They are never shared for advertising."
 
 ## Terms of Service
-- Covers: audio recording, server-side storage, founder access for improvement purposes, third-party AI processing (Hume AI for voice, Anthropic for analysis).
+- Covers: audio recording, server-side storage, founder access for improvement purposes, third-party AI processing (Google Gemini for voice and analysis).
 - Linked during onboarding (Google OAuth screen) and in Settings.
