@@ -1,9 +1,8 @@
-import React from 'react'
-
-function hello() {
+'use client';
+const Hello = () => {
   return (
     <div>hello</div>
   )
 }
 
-export default hello
+export default Hello
