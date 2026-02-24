@@ -60,7 +60,7 @@ Each lesson follows the Book Absorption Method (BAM): read a principle → refle
 ### 🔫 Phase 0 — Tracer Bullet
 Prove the full path works end-to-end with the simplest possible version:
 - 👋 Onboarding: single question ("What's your name?"), saved to database
-- 📝 One button: "Take me to lesson" → AI-generated lesson page (follows the lesson template)
+- 📝 One button: "Take me to lesson" → Simple lesson page (follows the lesson template)
 - ✍️ Reflection text box at the bottom of the lesson, sends input to the AI agent
 - 🗣️ "Start Roleplay" button changes UI to roleplay mode — green circle when mic detects audio, yellow when silent
 - 🎭 Verify: Ask the agent 'who are you' (circle turns green), then the character agent responds ("Hey I'm the character"). Ask it "What's my name?" — it should answer correctly because the name was passed to its context
