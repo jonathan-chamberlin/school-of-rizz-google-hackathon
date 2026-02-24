@@ -60,12 +60,10 @@ Each lesson follows the Book Absorption Method (BAM): read a principle → refle
 ### 🔫 Phase 0 — Tracer Bullet
 Prove the full path works end-to-end with the simplest possible version:
 - 👋 Onboarding: single question ("What's your name?"), saved to database
-- ✍️ Text box named 'Reflection', sends input to the reasoning agent.
-- 🤖 Reasoning agent sends prompt to the voice agent ("you are a cowboy"). Launches voice mode.
-- 🎭 Verify: Ask the voice agent "What's my name?" — it should answer correctly because database sent it as context
-- 📝 Session ends, voice agent sends transcript to reasoning agent.
-- 📊 Reasoning agent is asked to generate scores, which is sent to the database, then is displayed on the frontend.
-- ✅ Success = data flows from onboarding → lesson → reflection → roleplay → both agents → scores
+- 🤖 Reasoning agent reads database and sends prompt to the voice agent ("the user's name is {name}"). Launches voice mode.
+- 🎭 Ask the voice agent "What's my name?". Verifying Hume API -> Browser audio connection. Voice agent should answer correctly.
+- 📝 Session ends, voice agent generates a warmth score, sends it and the transcipt to the database. 
+- 📊 Reasoning agent reads the database row of the transcript, generates a "humor" score, which is sent to the database, then is displayed on the frontend.
 
 ### 📝 Phase 1 — Lessons & Onboarding
 - 👋 Full onboarding flow (name, age, goals, identity tier, environment)
