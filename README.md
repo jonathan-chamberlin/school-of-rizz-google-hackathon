@@ -60,12 +60,11 @@ Each lesson follows the Book Absorption Method (BAM): read a principle → refle
 ### 🔫 Phase 0 — Tracer Bullet
 Prove the full path works end-to-end with the simplest possible version:
 - 👋 Onboarding: single question ("What's your name?"), saved to database
-- 📝 One button: "Take me to lesson" → Simple lesson page (follows the lesson template)
-- ✍️ Reflection text box at the bottom of the lesson, sends input to the AI agent
-- 🗣️ "Start Roleplay" button changes UI to roleplay mode — green circle when mic detects audio, yellow when silent
-- 🎭 Verify: Ask the agent 'who are you' (circle turns green), then the character agent responds ("Hey I'm the character"). Ask it "What's my name?" — it should answer correctly because the name was passed to its context
-- 🏋️ Coach agent (different voice, circle changes to blue) is sent the prompt "Give some encouragement. 10 words or less," and we hear it's response.
-- 📊 Session ends, scores are randomly generated and displayed
+- ✍️ Text box named 'Reflection', sends input to the reasoning agent.
+- 🤖 Reasoning agent sends prompt to the voice agent ("you are a cowboy"). Launches voice mode.
+- 🎭 Verify: Ask the voice agent "What's my name?" — it should answer correctly because database sent it as context
+- 📝 Session ends, voice agent sends transcript to reasoning agent.
+- 📊 Reasoning agent is asked to generate scores, which is sent to the database, then is displayed on the frontend.
 - ✅ Success = data flows from onboarding → lesson → reflection → roleplay → both agents → scores
 
 ### 📝 Phase 1 — Lessons & Onboarding
