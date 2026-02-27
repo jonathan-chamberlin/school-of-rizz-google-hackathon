@@ -16,7 +16,7 @@ Forked from social-skills-web-app. Swapped all AI/infra providers for Google sta
 ## Next steps
 
 1[done]. Set up Next.js project with Google GenAI SDK (`@google/genai`)
-Watching next.js tutorial, left off here https://www.youtube.com/watch?v=I1V9YWqRIeI&t=1195s
+Watching next.js tutorial, left off here https://youtu.be/I1V9YWqRIeI?t=1420
 2. Build tracer bullet
 1) Read 3-technical\database-schema.md and 2-product-definition\ux-spec.md 2) The watch app mafia video on design\wireframing 3) Then create user flow charts. Like each screen, where the buttons are, and where they go.
 3. Single NPC roleplay: user talks, Gemini responds in character
