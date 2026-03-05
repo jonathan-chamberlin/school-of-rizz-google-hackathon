@@ -63,7 +63,7 @@ Prove the full path works end-to-end with the simplest possible version:
 - 🤖 Reasoning agent reads database and sends prompt to the Gemini Live API voice agent ("the user's name is {name}"). Launches voice mode.
 - 🎭 Ask the voice agent "What's my name?". Verifying Gemini Live API → Browser audio connection. Voice agent should answer correctly.
 - 📝 Session ends, voice agent generates a warmth score, sends it and the transcript to the database.
-- 📊 Reasoning agent reads the database row of the transcript, generates a "humor" score, which is sent to the database
+- 📊 Reasoning agent reads the database row of the transcript, generates a "warmth" score, which is sent to the database
 - 💖 Then both the warmth score and humor score are displayed on the frontend.
 
 ### 📝 Phase 1 — Lessons & Onboarding
