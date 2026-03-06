@@ -8,9 +8,9 @@ Frontend: Next.js, React, TypeScript, Tailwind CSS |
 Backend: Next.js API Routes, Prisma |
 Database | Cloud SQL (PostgreSQL) |
 Auth | Google OAuth |
-AI (reasoning) | Gemini 2.0 Flash (coaching, NPC behavior), Gemini 2.0 Flash Lite (suggestions, simple tasks) |
-Voice AI | Gemini Live API (real-time bidirectional voice — STT + TTS + reasoning unified) |
-Agent Framework | Google Agent Development Kit (ADK) |
+AI (reasoning) | gpt-realtime (coaching, NPC behavior) |
+Voice AI |  OpenAI Realtime API (real-time bidirectional voice — STT + TTS + reasoning unified) |
+Agent Framework | none |
 Audio/Video Storage | Cloud Storage |
 Hosting | Cloud Run |
 Content | MDX files in repo |
@@ -43,8 +43,8 @@ Content | MDX files in repo |
 - Never import PrismaClient directly. Always use the singleton from `lib/db.ts`.
 - Migrations get descriptive names: `add-session-feedback-relation`.
 
-### Gemini / ADK
-- All prompt templates live in `lib/prompts/` as type safe functions with variables passed as arguements. Example: `geminiSystemPrompt(name: string): string`
+### OpenAI Realtime / ADK
+- All prompt templates live in `lib/prompts/` as type safe functions with variables passed as arguements. Example: `OpenAiSystemPrompt(name: string): string`
 - Never hardcode model names. Use constants from `lib/constants/models.ts`.
 - Wrap all AI calls in try/catch with structured error logging.
 
@@ -77,7 +77,7 @@ When creating tables, assume column can be null unless explicitly stated not nul
 | Thing                | Convention                    | Example                          |
 |----------------------|-------------------------------|----------------------------------|
 | Files (components)   | kebab-case.tsx                | voice-recorder.tsx               |
-| Files (utils/lib)    | kebab-case.ts                 | gemini-client.ts                 |
+| Files (utils/lib)    | kebab-case.ts                 | oai-client.ts                 |
 | React components     | PascalCase                    | VoiceRecorder                    |
 | Hooks                | camelCase with `use` prefix   | useVoiceSession                  |
 | Types/Interfaces     | PascalCase, no `I` prefix     | ScenarioConfig                   |
@@ -85,5 +85,5 @@ When creating tables, assume column can be null unless explicitly stated not nul
 | API routes           | kebab-case folders            | api/voice-sessions/route.ts      |
 | DB tables (Prisma)   | PascalCase singular           | model Session {}                 |
 | DB columns (Prisma)  | camelCase                     | createdAt, userId                |
-| Env variables        | UPPER_SNAKE_CASE              | GEMINI_API_KEY                   |
+| Env variables        | UPPER_SNAKE_CASE              | OPENAI_API_KEY                   |
 | CSS classes          | Tailwind only, no custom classes unless absolutely necessary | — |

@@ -28,7 +28,7 @@ tracer_transcript
                 - "You are a social skills coach. The user's name is {tracer_user.name}. Have a brief conversation with them."
         - transcriptReportingPrompt.ts
             - transcriptReportingPrompt(): string
-                - 'For each turn of this conversation, generate and output JSON including the role of the speaker and the content of what they said. - Example: if the user says "My name is Steven", then gemini would output text of {role: "user", content: "My name is Steven"}. - Example: If the coach voice agent says "Try mirroring", then gemini would output text of {role: "coach", content: "Try mirroring."}.'
+                - 'For each turn of this conversation, generate and output JSON including the role of the speaker and the content of what they said. - Example: if the user says "My name is Steven", then OpenAI Realtime would output text of {role: "user", content: "My name is Steven"}. - Example: If the coach voice agent says "Try mirroring", then OpenAI Realtime would output text of {role: "coach", content: "Try mirroring."}.'
 
 ## API routes
 With examples.
@@ -79,13 +79,13 @@ Error handling: connection failure shows error banner, SDP failure shows error, 
 - The user is redirected to the page at app > tracer_voice
 
 ### tracer_voice
-- The tracer_voice page tells the browser to request mic permission from the user, then it uses a websocket to connect the user's browser (and therefore audio) to establish connection with the Google Gemini Live API. 
-- This page needs a onclose for if the Gemini Live API fails to connect. If this happens, display an error message at the top like "Error establishing connection with Google Gemini Live API. Error Code: {error_code}" 
-- As the conversation goes, Google Gemini is outputting a transcript. For the transcript, the google gemini live api sends text representation of each turn as they happen using transcriptReportingPrompt: 
+- The tracer_voice page tells the browser to request mic permission from the user, then it uses a websocket to connect the user's browser (and therefore audio) to establish connection with the OpenAI Realtime API. 
+- This page needs a onclose for if the OpenAI Realtime fails to connect. If this happens, display an error message at the top like "Error establishing connection with OpenAI Realtime Live API. Error Code: {error_code}" 
+- As the conversation goes, OpenAI Realtime is outputting a transcript. For the transcript, the google OpenAI Realtime live api sends text representation of each turn as they happen using transcriptReportingPrompt: 
     - Generating a transcript line and warmth score are functional.
     - The procedures on top of it: For each the transcript and warmth score, the browser revires each turn from the websocket and POSTs it to an api route in app/api route, with inserts a new row into tracer_trascript table. For now we'll hardcode id = 1, but 'role' column should be the role value of the json, and the 'content' should be the content value of the json.
-- The tracer_voice has a button which says "End Roleplay". Once the button is clicked, it tells the browser to send a message to gemini via websocket: "Evaluate the user based on how warm their tone was in that conversation. Output text (not audio) of a warmth score in json format. Example: {warmth_score: 50}. This is a function since it's just generating an output.
-- Gemini sends this message via a websocket to the browser. Then the browser makes a seperate POST HTTP request, updating the row of table tracer_user with ID=1, and putting the warmth_score int into the column 'warmth_score'. We can actually find the correct row to update later. Note a comment next to the line that we only set it to be so simple for the tracer and that is should be updated in the full version to update something different (no need to be specifc on that yet). 
+- The tracer_voice has a button which says "End Roleplay". Once the button is clicked, it tells the browser to send a message to OpenAI Realtime via websocket: "Evaluate the user based on how warm their tone was in that conversation. Output text (not audio) of a warmth score in json format. Example: {warmth_score: 50}. This is a function since it's just generating an output.
+- OpenAI Realtime sends this message via a websocket to the browser. Then the browser makes a seperate POST HTTP request, updating the row of table tracer_user with ID=1, and putting the warmth_score int into the column 'warmth_score'. We can actually find the correct row to update later. Note a comment next to the line that we only set it to be so simple for the tracer and that is should be updated in the full version to update something different (no need to be specifc on that yet). 
 - Once the database is updated, the user gets redirected to the page tracer_scores
 
 ### tracer_scores
@@ -141,7 +141,7 @@ I expect the pattern of the gemimi connection code to survive, and the code to d
         - Use GET /api/tracer/scores/1 — read user for the scores page to verify that the scores were inserted into the database
         - Reload tracer_scores page to ensure the scores have rendered
     - Depends on: chunk 1
-- Chunk 3: Voice page + Gemini Live API
+- Chunk 3: Voice page + OpenAI Realtime API
     - Build page tracer_voice, epemeral token endpoint, websocket connection, audio pipeline, transcript streaming, warmth score flow
     - Test:
         - Test 1: On tracer_onboarding, type a name "Marcus" into the box, click submit, and verify that user is temporarily redirected to the tracer_scores page.
@@ -152,8 +152,8 @@ I expect the pattern of the gemimi connection code to survive, and the code to d
             Depends on: chunks 1 and 2
 
 ## Anti-patterns — what would a wrong-but-plausible implementation look like?
-- building a server-side websocket between the browser and gemini (Wrong because the browser connects to it directly)
-- The agent inserting rows into tracer_transcript with content that wasn't actually said, like maybe Gemini's internal reasoning (Wrong because content must have been words actually said out loud, either by the user or the Gemini voice)
+- building a server-side websocket between the browser and OpenAI Realtime (Wrong because the browser connects to it directly)
+- The agent inserting rows into tracer_transcript with content that wasn't actually said, like maybe OpenAI Realtime's internal reasoning (Wrong because content must have been words actually said out loud, either by the user or the OpenAI Realtime voice)
 - Skipping Zod validation because "security isn't important" (wrong — you explicitly said to use Zod)
-- Putting Gemini API keys directly in react components (wrong because you are to use ephemeral tokens)
+- Putting OpenAI Realtime API keys directly in react components (wrong because you are to use ephemeral tokens)
 - Creating one monolothic api route that has all CRUD operations (wrong because I specified these in the API routes heading)
