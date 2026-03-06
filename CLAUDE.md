@@ -1,5 +1,7 @@
 This project is School of Rizz, a web application which uses lessons and voice AI agents to help users practice social skills via roleplay.
 
+For openai realtime, refer to this site: https://developers.openai.com/api/docs/guides/realtime/
+
 ## 🛠️ Tech Stack
 
 Frontend: Next.js, React, TypeScript, Tailwind CSS |
